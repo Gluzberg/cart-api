@@ -43,7 +43,7 @@ namespace CartAPI.Service.Imp
 
             string token = string.Empty;
              
-            UserStatus status = user != null && user.Password.Equals(parameter.User.Password) && (token = this.BuildToken(user)) != null ? 
+            UserStatus status = user != null && user.Password.Equals(parameter.User.Password) && (token = this.BuildToken()) != null ? 
                 UserStatus.Success : 
                 UserStatus.InvalidCredentials;
 
@@ -77,9 +77,8 @@ namespace CartAPI.Service.Imp
         /// <summary>
         /// Builds the token.
         /// </summary>
-        /// <param name="user">The user.</param>
         /// <returns>Token value</returns>
-        private string BuildToken(IUser user)
+        private string BuildToken()
         {
             SymmetricSecurityKey key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(this.Configuration[Labels.Key]));
 
