@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CartAPI.Data.Imp\CartAPI.Data.Imp.csproj" />
+    <ProjectReference Include="..\CartAPI.Data\CartAPI.Data.csproj" />
+    <ProjectReference Include="..\CartAPI.Repository.Imp\CartAPI.Repository.Imp.csproj" />
+    <ProjectReference Include="..\CartAPI.Repository\CartAPI.Repository.csproj" />
+    <ProjectReference Include="..\CartAPI.Service.Imp\CartAPI.Service.Imp.csproj" />
+    <ProjectReference Include="..\CartAPI.Service\CartAPI.Service.csproj" />
+  </ItemGroup>
+
+</Project>

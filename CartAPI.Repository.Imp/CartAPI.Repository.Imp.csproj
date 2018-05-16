@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CartAPI.Data.Imp\CartAPI.Data.Imp.csproj" />
+    <ProjectReference Include="..\CartAPI.Data\CartAPI.Data.csproj" />
+    <ProjectReference Include="..\CartAPI.Repository\CartAPI.Repository.csproj" />
+  </ItemGroup>
+
+</Project>
